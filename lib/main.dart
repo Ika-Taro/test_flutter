@@ -84,9 +84,11 @@ class FirstPage extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) {
-                return SecondPage();
-              }),
+              MaterialPageRoute(
+                  builder: (context) {
+                    return SecondPage();
+                  },
+                  fullscreenDialog: true),
             );
           },
           child: Text('Next Page'),
