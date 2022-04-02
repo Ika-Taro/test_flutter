@@ -78,17 +78,17 @@ class MyApp extends StatelessWidget {
 class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("First Page")),
+      appBar: AppBar(title: const Text("First Page",style: TextStyle(color: Colors.white),
+      ),
+      backgroundColor: Colors.black),
       body: Center(
         child: RaisedButton(
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                  builder: (context) {
-                    return SecondPage();
-                  },
-                  fullscreenDialog: true),
+              MaterialPageRoute(builder: (context) {
+                return SecondPage();
+              }),
             );
           },
           child: Text('Next Page'),
